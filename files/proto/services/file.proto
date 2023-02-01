@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "github.com/moemoe89/go-grpc-upload/files/go/file";
+
+// FileService is a service that handles upload file.
+service FileService {
+  // Upload uploads file to the server.
+  rpc Upload (stream UploadRequest) returns (Empty) {}
+}
+
+// UploadRequest
+message UploadRequest {
+  // The name of the file.
+  string filename = 1;
+  // The byte of the file.
+  bytes data = 2;
+  // The offset of the file.
+  int64 offset = 3;
+}
+
+// Empty
+message Empty {
+
+}

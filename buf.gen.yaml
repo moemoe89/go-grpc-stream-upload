@@ -1,0 +1,10 @@
+version: v1
+plugins:
+  - name: go
+    out: .
+    strategy: directory
+    opt: module=github.com/moemoe89/go-grpc-upload
+  - name: go-grpc
+    out: .
+    strategy: directory
+    opt: module=github.com/moemoe89/go-grpc-upload
